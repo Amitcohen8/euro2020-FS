@@ -1,5 +1,6 @@
 import React from 'react'
 import countries from '../utils/countries'
+import validator from 'validator';
 import { connect } from 'react-redux'
 import { useState } from 'react'
 const SingleGame = (props) => {
@@ -27,7 +28,7 @@ const intValidation = "return event.charCode === 0 || /\d/.test(String.fromCharC
 
 const inputValidation = (e) => {
   const {value,name} = e.target
-if(value < 0 || value > 9 || Number.isInteger(value) || isNaN(value)){
+if(value < 0 || value > 9 || isNaN(value) || !validator.isInt(value)){
 setInput({[name]:''})
 setIsValidG(false)
 } 
