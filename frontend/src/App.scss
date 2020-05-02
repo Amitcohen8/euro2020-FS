@@ -1,0 +1,373 @@
+P {
+    font-weight: bold;
+    // text-align: center;
+    color:#001f3f;
+    align-self: center;
+    text-align: center;
+  }
+  a{
+    // display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 0.75em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    // background-color: rgb(124, 194, 115);
+    float: right;
+  }
+  @media screen and (min-width: 320px) and (max-width: 413px) {
+   
+    .main {
+      flex-direction: column;
+    }
+    .game-form{
+      width:100%;
+    }
+    p{
+      // display: none;
+      width:3em;
+      font-size: 0.7rem;
+      margin: 0 1em;
+      
+    }
+    .home-team{
+      text-align: start;
+    }
+    .away-team{
+      text-align: center;
+      margin-right: auto;
+    }
+    .table {
+      align-self: center;
+      margin:auto;
+      width: 100%;
+      font-size: 0.75rem;
+      td,th{
+        padding: 0.25em
+      }
+  
+    }
+    .on-mobile{
+      display: none;
+    }
+    form {
+      padding: 0.25em;
+      div{
+        input{
+            
+            max-width: 2.3em;
+            max-height: 2.3em;
+            border: 1px solid;
+            align-self:center;
+        }
+        input[type="text"]
+  {
+      font-size:0.9rem;
+  }
+    } 
+    a{
+      // display: inline-block;
+      // padding: 0.75em 1.5em;
+      // border-radius: 0.75em;
+      font-size: 0.8rem;
+     
+    }
+    }
+    .form-group{
+      justify-content: center;
+    }
+    img{
+      width:3em;
+  margin: 0;
+    }
+    .home{
+      margin-left:2em;
+      float: left;
+    }
+    .away{
+      margin-right:2em;
+      float:right;
+    }
+  }
+  
+  @media screen and (min-width: 414px) and (max-width: 768px) {
+   
+    .main {
+      flex-direction: column;
+    }
+    .game-form{
+      width:100%;
+    }
+    .table {
+      align-self: center;
+      margin:auto;
+      width: 100%;
+      font-size: 0.85rem;
+      td,th{
+        padding: 0.5em
+      }
+  
+    }
+    p{
+      width:3em;
+      font-size: 0.75rem;
+      margin: 0 1.2em;
+    }
+    .on-mobile{
+      display: none;
+    }
+    form {
+      padding: 1em;
+      div{
+        input{
+            // width: 1em;
+            min-width: 0.5em;
+            width: 0.5em;
+            
+            border: 1px solid;
+            align-self:center;
+        }
+        
+    } 
+      
+    }
+    .form-group{
+    justify-content: center;
+    }
+    .home{
+      margin-left: 1.5em;
+    }
+    .away{
+      margin-right: 1.5em ;
+    }
+    img{
+      margin: 0 1em;
+    }
+  }
+  
+  
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+   
+    .main {
+      flex-direction: column;
+    }
+    .game-form{
+      width:100%;
+    }
+    div{
+      input {
+          min-width: 0.5em;
+          border: 1px solid;
+          align-self:center;
+      }
+  } 
+    .table {
+      align-self: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+    p{
+      width:5em;
+      font-size: 0.85rem;
+      margin: 0 1.5em;
+    }
+    form {
+      padding: 2em;
+    }
+    .form-group{
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .main {
+      justify-content: space-around; 
+    }
+    
+    div{
+      input{
+          width: 1em;
+          min-width: auto;
+          margin: 0em; 
+          border: 1px solid;
+          align-self:center;
+      }
+  } 
+    .table {
+      margin: 0 auto;
+      width: auto;
+  }
+  p{
+    width:6em;
+    font-size: 1rem;
+    margin: 0 0.7em;
+  }
+  form {
+    padding: 2em;
+  }
+  .form-group{
+    justify-content: center;
+  }
+  }
+  
+  
+  
+  
+  .App {
+    text-align: center;
+    margin: auto;
+    background-image: url(./assets/ronaldo1.jpg);
+  
+  
+  }
+  .bg-success{
+    font-weight: 500;
+    // background-color: #A1EF63;
+  }
+  
+  
+  
+  
+  .main {
+    display: flex;
+    // justify-content: space-between; 
+  }
+  
+  
+  //Game
+  
+  
+  form{
+    // padding: 2rem;
+     overflow: hidden ;
+    background-color: #f5f7fa;
+    opacity: 0.8;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  a{
+    background-color: #57a957;
+    border-color: #57a957;
+  }
+  
+  a:hover{
+    background-color: #62c462;
+  }
+  
+  a:active{
+    background: #57a957;
+  }
+  
+    flex-direction: column;
+    div{
+        input{
+           font-weight: bold;
+        }
+       
+    } 
+  }
+  
+  .form-control{
+    width: 3rem;
+    min-width: 2em;
+    border: 1px solid;
+    
+  }
+  .form-group{
+    display:flex;
+    // justify-content: center;
+    // margin-left:1.5em;
+    // text-align: center;
+  }
+  
+  
+  h2{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  
+  input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+  }
+  
+  .team{
+    display: flex;
+    
+  }
+  .winner{
+    display: flex;
+    justify-content: center;
+    
+    // font-family: Georgia, sans-serif;
+  }
+  
+  .validation-comment{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color:red;
+    width: auto;
+    font-weight: semi-bold;
+  }
+  
+  
+  
+  //Header
+  
+  h1{
+    background-color: black;
+  margin: 0;
+    // background-color: #128E9D;
+    padding: 1rem;
+  }
+  
+  
+  //GroupTable
+  
+  .table {
+    
+    opacity: 0.8;
+    
+  }
+  
+  .standings{
+  background-color: #f5f7fa;
+  width: 95%;
+  margin:0;
+  opacity: 0.8;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  }
+  .table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #f5f7fa;
+  }
+  
+  
+  
+  .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: white;
+  }
+  
+  .qualified{
+    background-color: green !important;
+    }
