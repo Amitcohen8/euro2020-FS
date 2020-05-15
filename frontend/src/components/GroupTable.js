@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import TableRow from './TableRow'
 import GroupHeader from './GroupHeader'
 const GroupTable = (props) => {
-  const {a,b,c,d,e,f} = props.scores.groups;
+  const { a, b, c, d, e, f } = props.scores.groups;
   let teamsA = a.teams;
   let teamsB = b.teams;
   let teamsC = c.teams;
@@ -42,170 +42,35 @@ const GroupTable = (props) => {
 
   return (
     <div className="table ">
-      
+
       <Table striped bordered >
-<thead className={tableFrame}>
+        <thead className={tableFrame}>
           <tr >
             <th colSpan="9">Groups Standings</th>
           </tr>
         </thead>
 
-<tbody className={tableFrame}>
-  
-<GroupHeader letter={'A'}/>
-{tableHeader}
-{standingA}
-<GroupHeader letter={'B'}/>
-{tableHeader}
-{standingB}
-<GroupHeader letter={'C'}/>
-{tableHeader}
-{standingC}
-<GroupHeader letter={'D'}/>
-{tableHeader}
-{standingD}
-<GroupHeader letter={'E'}/>
-{tableHeader}
-{standingE}
-<GroupHeader letter={'F'}/>
-{tableHeader}
-{standingF}
-</tbody>
+        <tbody className={tableFrame}>
 
-
-
-        {/* <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group A</th>
-          </tr>
-        </thead> */}
-{/* 
-        <tr>
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
+          <GroupHeader letter={'A'} />
+          {tableHeader}
           {standingA}
-        </tbody>
-        <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group B</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
+          <GroupHeader letter={'B'} />
+          {tableHeader}
           {standingB}
-        </tbody >
-        <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group C</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
+          <GroupHeader letter={'C'} />
+          {tableHeader}
           {standingC}
-        </tbody >
-        <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group D</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
+          <GroupHeader letter={'D'} />
+          {tableHeader}
           {standingD}
-        </tbody >
-        <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group E</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
-          <tr>
-            <th>Team</th>
-            <th>P</th>
-            <th>W</th>
-            <th>D</th>
-            <th>L</th>
-            <th>GS</th>
-            <th>GA</th>
-            <th>GD</th>
-            <th>Pts</th>
-          </tr>
+          <GroupHeader letter={'E'} />
+          {tableHeader}
           {standingE}
-        </tbody >
-        <thead className={tableFrame}>
-          <tr >
-            <th colSpan="9">Group F</th>
-          </tr>
-        </thead>
-        <tr>
-
-          <th >Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GS</th>
-          <th>GA</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-        <tbody style={tableFrame}>
+          <GroupHeader letter={'F'} />
+          {tableHeader}
           {standingF}
-        </tbody > */}
-
+        </tbody>
       </Table>
     </div>
   )

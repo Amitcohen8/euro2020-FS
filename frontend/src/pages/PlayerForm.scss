@@ -216,7 +216,7 @@ P {
   .App {
     text-align: center;
     margin: auto;
-    background-image: url(./assets/ronaldo1.jpg);
+    background-image: url(../assets/ronaldo1.jpg);
   
   
   }
@@ -332,8 +332,8 @@ P {
   
   h1{
     background-color: black;
-  margin: 0;
-    // background-color: #128E9D;
+  
+    
     padding: 1rem;
   }
   
@@ -372,4 +372,54 @@ P {
     background-color: green !important;
     }
 
-   
+   h4{
+     color:white;
+     background:transparent;
+     align-self: center;
+     font-size: 2rem;
+     margin-left: 1em;
+    //  flex:1;
+   }
+h5{
+  opacity: 0;
+  flex:1;
+}
+   .appHeader{
+     display: flex;
+     justify-content: space-around;
+    //  width:100%;
+    //  margin: 0 auto;
+    //  align-items: center;
+     background-color: black;
+     
+   }
+
+
+   input.submit-btn{
+     width:auto;
+     padding: 0.5em;
+     background-color: black;
+     color:white;
+     font-weight: 500;
+     font-size: 1.25rem;
+     cursor: pointer;
+     &:hover{
+       background-color: grey;
+     }
+   }
+
+
+   p.errMsg {
+     color:red;
+   }
+
+   a.logout-btn{
+     align-self: center;
+     color:white;
+     background-color: gray;
+     width:auto;
+    // flex:1; 
+    &:hover{
+      
+    }
+   }

@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser')
 require('./db/mongoose')
 
 userRouter = require('./routers/user')
+resultRouter = require('./routers/result')
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(cookieParser())
 app.use(cors())
 app.use(express.json())
 app.use(userRouter)
-
+app.use(resultRouter)
 
 app.listen(port,()=>{
     console.log('Server is up on port ' + port)

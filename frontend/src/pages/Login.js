@@ -1,77 +1,63 @@
-import React, {useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
-import {Redirect, useHistory} from 'react-router-dom'
+import './Login.scss';
 
-
-import './Login.scss'
-import axios from 'axios'
 
 
 
 const Login = () => {
-const [state,setState] = useState({email:"",password:""})
-const [redirect,setRedirect] = useState(false)
-const history = useHistory()
+  const [state, setState] = useState({ email: "", password: "" })
+  const history = useHistory()
 
-const handleChange = (e) => {
-    const {name,value} = e.target
+  const handleChange = (e) => {
+    const { name, value } = e.target
 
-    setState({...state,[name]:value})
+    setState({ ...state, [name]: value })
 
-}
-const handleSubmit = (e)=>{
+  }
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    fetch('http://localhost:9000/users/login', {
-        method: 'POST',
-        body: JSON.stringify(state),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => {
-        console.log('1',res.status)
-        if (res.status === 200) {
-          
-          history.push('/playerform');
-        } else {
-          const error = new Error(res.error);
-          throw error;
-        }
-      })
-      .catch(err => {
-        console.error(err);
-        alert('Error logging in please try again');
-      });
-    // setRedirect(true)
-}
-// const login = ()=>{
-//     axios.post('http://localhost:9000/users/login',{
-//         "email":"amitcohen8@gmail.com",
-//         "password":"pitush222"
-//     }).then(res=>console.log('%%%%',res)).catch(e=>console.log(e))
-// }
+    try {
+      const response = await axios.post(
+        'http://localhost:9000/users/login',
+        state,
+      )
+      if (response.status === 200) {
+        localStorage.setItem('myToken', response.data.token);
+        localStorage.setItem('myEmail',response.data.email)
+        history.push('/app');
+      } else {
+        const error = new Error(response.error);
+        throw error;
+      }
+    } catch (err) {
+      console.log(err);
+      alert('Error logging in please try again');
+    };
 
-useEffect(() => {
-//    login()
-}, [])
+  }
 
 
-    return (
-        <div className="login-page">
-            <form onSubmit={handleSubmit} className="login-form">
-                <input type="email" placeholder="email" name="email" value={state.email} onChange={(e)=>{handleChange(e)}} required/>
-                <br/>
-                
-                <input type="password" placeholder="password" name="password" value={state.password} onChange={(e)=>{handleChange(e)}} required/>
-                <br/>
-                <input type="submit" value="Submit"/>
-              
-                <p>{state.email}</p>
-                <p>{state.password}</p>
-            </form>
+  useEffect(() => {
+    //    login()
+  }, [])
+
+
+  return (
+    <div className="login-page">
+      <form onSubmit={handleSubmit} className="login-form">
+        <input type="email" placeholder="email" name="email" value={state.email} onChange={(e) => { handleChange(e) }} required />
+        <br />
+        <input type="password" placeholder="password" name="password" value={state.password} onChange={(e) => { handleChange(e) }} required />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+      <div></div>
     </div>
-      
-    )
+
+  )
 }
 
 export default Login
